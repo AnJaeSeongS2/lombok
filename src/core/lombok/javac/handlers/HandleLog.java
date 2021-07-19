@@ -239,6 +239,17 @@ public class HandleLog {
 			processAnnotation(LoggingFramework.JBOSSLOG, annotation, annotationNode);
 		}
 	}
+
+	/**
+	 * Handles the {@link lombok.extern.jeuslog.JEUSLog} annotation for javac.
+	 */
+	@Provides
+	public static class HandleJEUSLog extends JavacAnnotationHandler<lombok.extern.jeuslog.JEUSLog> {
+		@Override public void handle(AnnotationValues<lombok.extern.jeuslog.JEUSLog> annotation, JCAnnotation ast, JavacNode annotationNode) {
+			handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JEUSLOG_FLAG_USAGE, "@JEUSLog", ConfigurationKeys.LOG_ANY_FLAG_USAGE, "any @Log");
+			processAnnotation(LoggingFramework.JEUSLOG, annotation, annotationNode);
+		}
+	}
 	
 	/**
 	 * Handles the {@link lombok.extern.flogger.Flogger} annotation for javac.

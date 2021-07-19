@@ -67,6 +67,12 @@ public class LoggingFramework {
 		lombok.extern.jbosslog.JBossLog.class,
 		LogDeclaration.valueOf("org.jboss.logging.Logger org.jboss.logging.Logger.getLogger(TYPE)(TOPIC)")
 	);
+
+	// private static final java.util.logging.Logger log = jeus.util.logging.JeusLogger.getLogger(TargetType.class);
+	public static final LoggingFramework JEUSLOG = new LoggingFramework(
+		lombok.extern.jeuslog.JEUSLog.class,
+		LogDeclaration.valueOf("java.util.logging.Logger jeus.util.logging.JeusLogger.getLogger(TYPE)(TOPIC)")
+	);
 	
 	// private static final com.google.common.flogger.FluentLogger log = com.google.common.flogger.FluentLogger.forEnclosingClass();
 	public static final LoggingFramework FLOGGER = new LoggingFramework(

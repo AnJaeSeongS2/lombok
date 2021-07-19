@@ -31,6 +31,7 @@ module lombok {
 	exports lombok.extern.jackson;
 	exports lombok.extern.java;
 	exports lombok.extern.jbosslog;
+	exports lombok.extern.jeuslog;
 	exports lombok.extern.log4j;
 	exports lombok.extern.slf4j;
 	

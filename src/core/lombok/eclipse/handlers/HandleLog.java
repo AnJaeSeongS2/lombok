@@ -270,7 +270,7 @@ public class HandleLog {
 			processAnnotation(LoggingFramework.XSLF4J, annotation, source, annotationNode);
 		}
 	}
-	
+
 	/**
 	 * Handles the {@link lombok.extern.jbosslog.JBossLog} annotation for Eclipse.
 	 */
@@ -279,6 +279,17 @@ public class HandleLog {
 		@Override public void handle(AnnotationValues<lombok.extern.jbosslog.JBossLog> annotation, Annotation source, EclipseNode annotationNode) {
 			handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JBOSSLOG_FLAG_USAGE, "@JBossLog", ConfigurationKeys.LOG_ANY_FLAG_USAGE, "any @Log");
 			processAnnotation(LoggingFramework.JBOSSLOG, annotation, source, annotationNode);
+		}
+	}
+
+	/**
+	 * Handles the {@link lombok.extern.jeuslog.JEUSLog} annotation for Eclipse.
+	 */
+	@Provides
+	public static class HandleJEUSLog extends EclipseAnnotationHandler<lombok.extern.jeuslog.JEUSLog> {
+		@Override public void handle(AnnotationValues<lombok.extern.jeuslog.JEUSLog> annotation, Annotation source, EclipseNode annotationNode) {
+			handleFlagUsage(annotationNode, ConfigurationKeys.LOG_JEUSLOG_FLAG_USAGE, "@JEUSLog", ConfigurationKeys.LOG_ANY_FLAG_USAGE, "any @Log");
+			processAnnotation(LoggingFramework.JEUSLOG, annotation, source, annotationNode);
 		}
 	}
 	

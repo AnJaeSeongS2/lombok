@@ -460,6 +460,13 @@ public class ConfigurationKeys {
 	 * If set, <em>any</em> usage of {@code @JBossLog} results in a warning / error.
 	 */
 	public static final ConfigurationKey<FlagUsageType> LOG_JBOSSLOG_FLAG_USAGE = new ConfigurationKey<FlagUsageType>("lombok.log.jbosslog.flagUsage", "Emit a warning or error if @JBossLog is used.") {};
+
+	/**
+	 * lombok configuration: {@code lombok.log.jeuslog.flagUsage} = {@code WARNING} | {@code ERROR}.
+	 *
+	 * If set, <em>any</em> usage of {@code @JEUSLog} results in a warning / error.
+	 */
+	public static final ConfigurationKey<FlagUsageType> LOG_JEUSLOG_FLAG_USAGE = new ConfigurationKey<FlagUsageType>("lombok.log.jeuslog.flagUsage", "Emit a warning or error if @JEUSLog is used.") {};
 	
 	/**
 	 * lombok configuration: {@code lombok.log.flogger.flagUsage} = {@code WARNING} | {@code ERROR}.

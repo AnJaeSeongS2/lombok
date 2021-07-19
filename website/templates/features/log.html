@@ -30,7 +30,11 @@
 				</dd><dt id="JBossLog">
 					<code>@JBossLog</code>
 				</dt><dd>
-					Creates <code><span class="keyword">private&nbsp;static&nbsp;final&nbsp;</span><a href="https://docs.jboss.org/jbosslogging/latest/org/jboss/logging/Logger.html">org.jboss.logging.Logger</a>&nbsp;<span class="staticfield">log</span>&nbsp;=&nbsp;<a href="https://docs.jboss.org/jbosslogging/latest/org/jboss/logging/Logger.html#getLogger(java.lang.Class)">org.jboss.logging.Logger.getLogger</a>(LogExample.<span class="keyword">class</span>);</code>
+                Creates <code><span class="keyword">private&nbsp;static&nbsp;final&nbsp;</span><a href="https://docs.jboss.org/jbosslogging/latest/org/jboss/logging/Logger.html">org.jboss.logging.Logger</a>&nbsp;<span class="staticfield">log</span>&nbsp;=&nbsp;<a href="https://docs.jboss.org/jbosslogging/latest/org/jboss/logging/Logger.html#getLogger(java.lang.Class)">org.jboss.logging.Logger.getLogger</a>(LogExample.<span class="keyword">class</span>);</code>
+                </dd><dt id="JEUSLog">
+                    <code>@JEUSLog</code>
+                </dt><dd>
+					Creates <code><span class="keyword">private&nbsp;static&nbsp;final&nbsp;</span><a href="https://technet.tmaxsoft.com/upload/download/online/jeus/pver-20170202-000001/index.html">java.util.logging.Logger</a>&nbsp;<span class="staticfield">log</span>&nbsp;=&nbsp;<a href="https://technet.tmaxsoft.com/upload/download/online/jeus/pver-20170202-000001/index.html#getLogger(java.lang.Class)">jeus.util.logging.JeusLogger.getLogger</a>(LogExample.<span class="keyword">class</span>);</code>
 				</dd><dt id="javaLog">
 					<code>@Log</code>
 				</dt><dd>
@@ -107,6 +111,10 @@
 		</dt><dd>
 			Lombok will flag any usage of <code>@lombok.extern.jbosslog.JBossLog</code> as a warning or error if configured.
 		</dd><dt>
+            <code>lombok.log.jeuslog.flagUsage</code> = [<code>warning</code> | <code>error</code>] (default: not set)
+        </dt><dd>
+            Lombok will flag any usage of <code>@lombok.extern.jeuslog.JEUSLog</code> as a warning or error if configured.
+        </dd><dt>
 			<code>lombok.log.javaUtilLogging.flagUsage</code> = [<code>warning</code> | <code>error</code>] (default: not set)
 		</dt><dd>
 			Lombok will flag any usage of <code>@lombok.extern.java.Log</code> as a warning or error if configured.
